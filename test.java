@@ -10,11 +10,11 @@ public class test implements Runnable {
 
 	@Override public void run() {  
 
-		try {
-			Thread.sleep((int) Math.random()*10000);
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		}
-        System.out.println(this.num);
+		int x = Main.List2.get(0);
+		Main.List2.remove(0);
+		Main.List3.add(x);
+
+
+        //System.out.println(x);
     }
 }
