@@ -9,10 +9,13 @@ public class test implements Runnable {
 	}
 
 	@Override public void run() {  
-
-		int x = Main.List2.get(0);
-		Main.List2.remove(0);
-		Main.List3.add(x);
+		try {
+			int x = Main.List2.get(0);
+			Main.List2.remove(0);
+			Main.List3.add(x);
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 
 
         //System.out.println(x);
